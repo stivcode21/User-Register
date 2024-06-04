@@ -67,11 +67,49 @@ btn_adelante2.addEventListener("click", function(sig){ //cuando escuche un click
                 /*PAGINA 2 / sig-pag3*/
 btn_adelante3.addEventListener("click", function(sig){ //cuando escuche un click se ejecuta la funcion
     sig.preventDefault(); //prevenir que se recree la pagina
+    
+    let fechaNac = document.querySelector('input[type="date"]').value;
+    var sexo = document.getElementById("sexo").value;
+
+    if ( sexo==-1 && fechaNac=="" ){
+        document.getElementById("fechaNac-error").innerHTML = "* seleccione una fecha"
+        document.getElementById("fechaNac").style.border = "2px solid #a8234a"
+        document.getElementById("sexo-error").innerHTML = "* seleccione una opcion."
+        document.getElementById("sexo").style.border = "2px solid #a8234a"
+    
+    }else if ( sexo==-1 || fechaNac=="" ) {
+
+        if ( sexo==-1) {
+            document.getElementById("sexo-error").innerHTML = "* seleccione una opcion."
+            document.getElementById("sexo").style.border = "2px solid #a8234a"
+        }else {
+            document.getElementById("sexo-error").innerHTML = ""
+            document.getElementById("sexo").style.border = "none"
+        }
+
+        if ( fechaNac=="" ){
+            document.getElementById("fechaNac-error").innerHTML = "* seleccione una fecha"
+            document.getElementById("fechaNac").style.border = "2px solid #a8234a"
+        }else {
+            document.getElementById("fechaNac-error").innerHTML = ""
+            document.getElementById("fechaNac").style.border = "none"
+        }
+
+    }
+    
+    else{
+
+    document.getElementById("sexo-error").innerHTML = ""
+    document.getElementById("sexo").style.border = "none"
+    document.getElementById("fechaNac-error").innerHTML = ""
+    document.getElementById("fechaNac").style.border = "none"
+
     movPag.style.marginLeft = "-50%"; // de 25% pasa a 50% para darle paso ala siguiente
     num[cont - 1].classList.add("active"); 
     progressText[cont - 1].classList.add("active");
     progresscheck[cont - 1].classList.add("active");
     cont += 1;
+}
 })
 /*PAGINA 2 / atras-pag1*/
 btn_atras1.addEventListener("click", function(sig){ 

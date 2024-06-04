@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Paso a Paso formulario</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <header>REGISTRO DE USUARIOS</header>
+
+        <div class="progress-bar">
+            <div class="paso">
+                <p>Datos</p>
+                <div class="num">
+                    <span>1</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="paso">
+                <p>Nac.</p>
+                <div class="num">
+                    <span>2</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="paso">
+                <p>Contacto</p>
+                <div class="num">
+                    <span>3</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="paso">
+                <p>Usuario</p>
+                <div class="num">
+                    <span>4</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+        </div>
+
+        <div class="form-princ">
+            <form action="#">
+
+                <!-- PAGINA 1 -->
+                <div class="pagina movPag">
+
+                    <div class="titulo">
+                        <h2>Informacion Principal</h2>
+                    </div>
+                    <div class="campo">
+                        <div class="label">Nombre: <b class="error" id="nombres-error"></b></div>
+                        <input type="text" id="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="campo">
+                        <div class="label">Primer Apellido: <b class="error" id="apellido1-error"></b></div>
+                        <input type="text"  id="apellido1" placeholder="Primer apellido">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Segundo Apellido: <b class="error" id="apellido2-error"></b></div>
+                        <input type="text"  id="apellido2" placeholder="Segundo apellido">
+                    </div>
+                    <div class="campo sigPag">
+                        <button>Siguiente</button>
+                    </div>
+                </div>
+
+
+                <!-- PAGINA 2 -->
+                <div class="pagina">
+
+                    <div class="titulo">
+                        <h2>Informacion Secundaria</h2>
+                    </div>
+                    <div class="campo">
+                        <div class="label">Fecha Nacimiento: <b class="error" id="fechaNac-error"></b></div>
+                        <input type="date" id="fechaNac" max="2007-12-31" required>
+                    </div>
+                    <div class="campo">
+                        <div class="label">Sexo: <b class="error" id="sexo-error"></b></div>
+                        <select id="sexo">
+                            <option value="-1" disabled selected>Escoge una opcion</option>
+                            <option value="0">Masculino</option>
+                            <option value="1">Femenino</option>
+                            <option value="2">Otro</option>
+                        </select>
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver volver-pag-1">Atras</button>
+                        <button class="adelante-pag3 adelante">Siguiente</button>
+                    </div>
+                </div>
+
+
+                <!-- PAGINA 3  -->
+                <div class="pagina">
+
+                    <div class="titulo">
+                        <h2>Informacion Contacto</h2>
+                    </div>
+                    <div class="campo">
+                        <div class="label">Correo Electronico: <b class="error" id="correo-error"></b></div>
+                        <input type="email" id="correo" placeholder="example.@gmail.com">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Numero <b class="error" id="numCel-error"></b></div>
+                        <input type="text" id="numCel" placeholder="Tu Numero">
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver volver-pag-2">Atras</button>
+                        <button class="adelante-pag4 adelante" type="submit">Siguiente</button>
+                    </div>
+                </div>
+
+
+                <!-- PAGINA 4  -->
+                <div class="pagina">
+                    <div class="titulo">
+                        <h2>Informacion Inicio Sesion</h2>
+                    </div>
+                    <div class="campo">
+                        <div class="label">Nombre Usuario: <b class="error" id="usuario-error"></b></div>
+                        <input type="text" id="usuario" placeholder="Nombre usuario">
+                    </div>
+                    <div class="campo">
+                        <div class="label">Contraseña <b class="error" id="contra-error"></b></div>
+                        <input type="password" id="contra" placeholder="contraseña">
+                        <span class="ojito" onclick="mostraContra()">
+                            <i id="Mostrar" class="fa fa-eye" title="Mostrar Contraseña"></i>
+                            <i id="Ocultar" class="fa fa-eye-slash" title="Ocultar Contraseña"></i>
+                        </span>
+                    </div>
+                    <div class="campo btns">
+                        <button class="volver volver-pag-3">Atras</button>
+                        <button class="fin">Finalizar</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+
+
+                <!-- Icons -->
+    <script src="https://kit.fontawesome.com/d3f589e164.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

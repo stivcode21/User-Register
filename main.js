@@ -27,7 +27,7 @@ let max = 4;
 let cont = 1;
 
 
-                /*PAGINA 1 / sig-pag2*/
+/*PAGINA 1 a pagina 2*/
 btn_adelante2.addEventListener("click", function(sig){ //cuando escuche un click se ejecuta la funcion
     sig.preventDefault(); //prevenir que se recree la pagina
     
@@ -36,13 +36,13 @@ btn_adelante2.addEventListener("click", function(sig){ //cuando escuche un click
     let apellido2 = document.getElementById("apellido2").value;
 
     if (nombre==""){
-        document.getElementById("nombres-error").innerHTML = "* escribe tu nombre"
+        document.getElementById("nombres-error").innerHTML = "* Escribe tu nombre"
         document.getElementById("nombre").style.border = "2px solid #a8234a" 
     }else if (apellido1=="") {
-        document.getElementById("apellido1-error").innerHTML = "*tu Primer Apellido"
+        document.getElementById("apellido1-error").innerHTML = "*Tu Primer Apellido"
         document.getElementById("apellido1").style.border = "2px solid #a8234a"
     }else if (apellido2=="") {
-        document.getElementById("apellido2-error").innerHTML = "*tu segundo Apellido" 
+        document.getElementById("apellido2-error").innerHTML = "*Tu segundo Apellido" 
         document.getElementById("apellido2").style.border = "2px solid #a8234a" 
     }   
         
@@ -64,7 +64,7 @@ btn_adelante2.addEventListener("click", function(sig){ //cuando escuche un click
 
 
 
-                /*PAGINA 2 / sig-pag3*/
+/*PAGINA 2 a pagina 3*/
 btn_adelante3.addEventListener("click", function(sig){ //cuando escuche un click se ejecuta la funcion
     sig.preventDefault(); //prevenir que se recree la pagina
     
@@ -72,15 +72,15 @@ btn_adelante3.addEventListener("click", function(sig){ //cuando escuche un click
     var sexo = document.getElementById("sexo").value;
 
     if ( sexo==-1 && fechaNac=="" ){
-        document.getElementById("fechaNac-error").innerHTML = "* seleccione una fecha"
-        document.getElementById("fechaNac").style.border = "2px solid #a8234a"
-        document.getElementById("sexo-error").innerHTML = "* seleccione una opcion."
+        document.getElementById("fechaNac-error").innerHTML = "* Seleccione una fecha"
+        document.getElementById("fechaNac").style.border = "2px Solid #a8234a"
+        document.getElementById("sexo-error").innerHTML = "* Seleccione una opcion."
         document.getElementById("sexo").style.border = "2px solid #a8234a"
     
     }else if ( sexo==-1 || fechaNac=="" ) {
 
         if ( sexo==-1) {
-            document.getElementById("sexo-error").innerHTML = "* seleccione una opcion."
+            document.getElementById("sexo-error").innerHTML = "* Seleccione una opcion."
             document.getElementById("sexo").style.border = "2px solid #a8234a"
         }else {
             document.getElementById("sexo-error").innerHTML = ""
@@ -98,7 +98,6 @@ btn_adelante3.addEventListener("click", function(sig){ //cuando escuche un click
     }
     
     else{
-
     document.getElementById("sexo-error").innerHTML = ""
     document.getElementById("sexo").style.border = "none"
     document.getElementById("fechaNac-error").innerHTML = ""
@@ -111,7 +110,8 @@ btn_adelante3.addEventListener("click", function(sig){ //cuando escuche un click
     cont += 1;
 }
 })
-/*PAGINA 2 / atras-pag1*/
+
+/*PAGINA 2 - atras pagina 1*/
 btn_atras1.addEventListener("click", function(sig){ 
     sig.preventDefault(); 
     movPag.style.marginLeft = "0%"; //regresaria al 0% 
@@ -123,16 +123,79 @@ btn_atras1.addEventListener("click", function(sig){
 
 
 
-                /*PAGINA 3 / sig-pag4*/
+/*PAGINA 3 a pagina 4*/
 btn_adelante4.addEventListener("click", function(sig){ 
     sig.preventDefault(); 
+
+let correo = document.getElementById("correo").value;
+let numCel = document.getElementById("numCel").value;
+if (correo=="" && numCel=="" ){
+    document.getElementById("correo-error").innerHTML = "* Escribe tu Email"
+    document.getElementById("correo").style.border = "2px solid #a8234a"
+    document.getElementById("numCel-error").innerHTML = "* Escribe tu N° de telefono"
+    document.getElementById("numCel").style.border = "2px solid #a8234a"
+}else if (correo=="" || numCel=="" ||
+          correo.length<6 || numCel.length!=10 || 
+          !verificarCorreo(correo) || !verificarNumCel(numCel)
+        ){
+        
+            if(correo=="") {
+                document.getElementById("correo-error").innerHTML = "* No puede quedar vacio"
+                document.getElementById("correo").style.border = "2px solid #a8234a"
+            }else if (correo.length<6){
+                document.getElementById("correo-error").innerHTML = "* 6 o mas caracteres"
+                document.getElementById("correo").style.border = "2px solid #a8234a"
+            }else if (!verificarCorreo(correo)) {
+                document.getElementById("correo-error").innerHTML = "* No olvidaste el @?"
+                document.getElementById("correo").style.border = "2px solid #a8234a"
+            }else{
+                document.getElementById("correo-error").innerHTML = ""
+                document.getElementById("correo").style.border = "none"
+            }
+            if(numCel=="") {
+                document.getElementById("numCel-error").innerHTML = "* No puede quedar vacio"
+                document.getElementById("numCel").style.border = "2px solid #a8234a"
+            }else if (numCel.length!=10 && !verificarNumCel(numCel)) {
+                document.getElementById("numCel-error").innerHTML = "* Debe ingresar solo numeros"
+                document.getElementById("numCel").style.border = "2px solid #a8234a"
+            }else if (numCel.length!=10){
+                document.getElementById("numCel-error").innerHTML = "* Debe tener 10 digitos"
+                document.getElementById("numCel").style.border = "2px solid #a8234a"
+            }else if (!verificarNumCel(numCel)) {
+                document.getElementById("numCel-error").innerHTML = "* Datos invalidos"
+                document.getElementById("numCel").style.border = "2px solid #a8234a"
+            }else {
+                document.getElementById("numCel-error").innerHTML = ""
+                document.getElementById("numCel").style.border = "none"
+            }
+        }else{
+            document.getElementById("correo-error").innerHTML = ""
+            document.getElementById("correo").style.border = "none"
+            document.getElementById("numCel-error").innerHTML = ""
+            document.getElementById("numCel").style.border = "none"
+
     movPag.style.marginLeft = "-75%"; //de 50% pasa a 75% para darle pason ala siguiente
     num[cont - 1].classList.add("active"); 
     progressText[cont - 1].classList.add("active");
     progresscheck[cont - 1].classList.add("active");
     cont += 1;
+}
+
+//funcion verificar correo
+function verificarCorreo($n){
+    let ExpRegular_Correo = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    return ExpRegular_Correo.test($n);
+}
+
+//funcion verificar numero de telefono
+function verificarNumCel($m){
+    let ExpRegular_Num = /^[\d]+$/;
+    return ExpRegular_Num.test($m);
+}
+
 })
-/*PAGINA 3 / atras-pag2*/
+
+/*PAGINA 3 - atras pagina 2*/
 btn_atras2.addEventListener("click", function(sig){ 
     sig.preventDefault(); 
     movPag.style.marginLeft = "-25%"; //regresaria al 25%
@@ -144,15 +207,81 @@ btn_atras2.addEventListener("click", function(sig){
 
 
 
-                /*pagina 4 / fin*/
+/*pagina 4 - fin*/
 btn_final.addEventListener("click", function(sig){ 
-    alert("aqui finaliza el registro.  ")
-    limpiar();
-    num[cont - 1].classList.add("active"); 
-    progressText[cont - 1].classList.add("active");
-    progresscheck[cont - 1].classList.add("active");
-    cont += 1;
+    sig.preventDefault(); 
+
+    let usuario = document.getElementById("usuario").value;
+    let contra = document.getElementById("contra").value;
+
+    if (usuario=="" && contra=="") {
+        document.getElementById("usuario-error").innerHTML = "* Escribe tu nombre usuario"
+        document.getElementById("usuario").style.border = "2px solid #a8234a"
+        document.getElementById("contra-error").innerHTML = "* Escribe tu contraseña"
+        document.getElementById("contra").style.border = "2px solid #a8234a"
+
+    }else if (usuario=="" || contra=="" ||
+            usuario.length<2 || contra.length<5 ||
+            !verificarUsuario(usuario) || !verificarContra(contra)
+    ){
+        if (usuario==""){
+         document.getElementById("usuario-error").innerHTML = "* Escribe tu nombre usuario"
+         document.getElementById("usuario").style.border = "2px solid #a8234a"
+        }else if (usuario.length<2 && !verificarUsuario(usuario)){
+         document.getElementById("usuario-error").innerHTML = "* Mayusculas, Minusculas y letras"
+         document.getElementById("usuario").style.border = "2px solid #a8234a"
+        }else if (usuario.length<2) {
+         document.getElementById("usuario-error").innerHTML = "* Debe tener 3 o mas caracteres"
+         document.getElementById("usuario").style.border = "2px solid #a8C234a"
+        }else if (!verificarUsuario(usuario)) {
+         document.getElementById("usuario-error").innerHTML = "* Ingreso datos invalidos"
+         document.getElementById("usuario").style.border = "2px solid #a8C234a"
+        }else{
+         document.getElementById("usuario-error").innerHTML = ""
+         document.getElementById("usuario").style.border = "none"
+        }
+
+        if (contra==""){
+         document.getElementById("contra-error").innerHTML = "* Escribe tu contraseña"
+         document.getElementById("contra").style.border = "2px solid #a8234a"
+        }else if (contra.length<5 && !verificarContra(contra)) {
+         document.getElementById("contra-error").innerHTML = "* Mayuscula, minuscula y N°"
+         document.getElementById("contra").style.border = "2px solid #a8234a"
+        }else if (contra.length<5){
+         document.getElementById("contra-error").innerHTML = "* Minimo 6 caracteres"
+         document.getElementById("contra").style.border = "2px solid #a8234a"
+        }else if (!verificarContra(contra)){
+         document.getElementById("contra-error").innerHTML = "* Mayuscula, minuscula y N°"
+         document.getElementById("contra").style.border = "2px solid #a8234a"
+        }else {
+         document.getElementById("contra-error").innerHTML = ""
+         document.getElementById("contra").style.border = "none"
+        }
+
+    }else{
+        alert("Aqui Finaliza El Registro. GRACIASS!")
+        limpiar();
+        num[cont - 1].classList.add("active"); 
+        progressText[cont - 1].classList.add("active");
+        progresscheck[cont - 1].classList.add("active");
+        cont += 1;
+    }
+
+
+// Funcion verificar usuario
+    function verificarUsuario($n){
+        let ExpRegular_Usuario = /^[a-zA-Z][a-zA-Z0-9_]{3,9}$/;
+        return ExpRegular_Usuario.test($n);
+    }
+
+// Funcion verificar contraseña
+    function verificarContra($n){
+        let ExpRegular_Contra = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,16}$/;
+        return ExpRegular_Contra.test($n);
+    }
+
 })
+
 /*PAGINA 4 / atras-pag3*/
 btn_atras3.addEventListener("click", function(sig){ 
     sig.preventDefault(); 
@@ -185,8 +314,6 @@ function mostraContra() {
 }
 
 //funcion limpiar
-
-
 function limpiar(){
     document.getElementById("nombre").value = "";
     document.getElementById("apellido1").value = "";

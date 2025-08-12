@@ -1,58 +1,74 @@
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=48e&height=120&section=header"/>
-<h1 align="center"> USER-REGISTER 👤</h1>
-<img src="https://i.ibb.co/r20bWzp/Captura-de-pantalla-2024-06-08-221937.png" align="center" >
-<span>Hola! 📢Este formulario de registro consta de 4 páginas, cada una de las cuales solicita información diferente y
-  tiene algunos requisitos para poder recorrer cada una de ellas. A continuación te explico de qué se trata.. No olvides agregar a Favoritos⭐</span>
-  <br> <br>
-<hr>
+<p align="center">
+  <img src="https://i.postimg.cc/x8gRWLSr/DESING-FORM-2.webp" alt="Form Design Preview" width="700" height="500" />
+</p>
 
-
-<h2 align="right">🔖Pagina 1️⃣</h2>
-<p align="center">No podemos pasar ala siguiente sin rellenar cada uno de los campos</p>
-<img src="https://i.ibb.co/D9yRrsm/pagina-1.gif" align="center" >
-
-<hr>
-
-<h2 align="right">🔖Pagina 2️⃣</h2>
-<p align="center">Requiere una fecha, y seleccionar una opcion para pasar la siguiente pagina</p>
-<img src="https://i.ibb.co/sPT7kD1/pagina-2.gif" align="center" >
-
-<hr>
-
-<h2 align="right">🔖Pagina 3️⃣</h2>
-<p align="center">No deja pasar ala siguiente pagina *sin agregar un correo valido (@) y *sin colocar (10 digitos No admite letras)</p>
-<img src="https://i.ibb.co/XsVtkqV/pagina-3.gif" align="center" >
-
-<h2 align="right">🔖Pagina 4️⃣</h2>
-<p align="center">Usuario debe tener minimo (3 letras) - contraseña minimo (6 caracteres); Mayuscula, Minuscula, numero</p>
-<img src="https://i.ibb.co/DWKmWNF/pagina-4.gif" align="center" >
-
-
-
-> [!NOTE]
->
-> 📌ACTUAL ACTUALIZACION:
->
-> condicionales de requerimientos para cada uno de los campos✅
->
-> barra de posicion de pagina -  con retroseso incluido✅
->
-> funciones para verficar (contraseña - numero - correo)✅
->
-> resposive includo ✅
->
-> (funcion) para ver O ocultar contraseña✅
->
-> al finalizar todos los campos se vacian, gracias a una funcion✅
->
-> 🔴 Solucion de bug de nombres y apellidos proximamente
->
-> 🔴 Se añadira una mejor documentacion
-
-<div align="right">
-  <h3>⚒️TECHNOLOGIES⚒️</h3>
-  <br>
-  <img src="https://skillicons.dev/icons?i=,html,css,javascript" />
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Chela%20One&size=55&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Form+Design;&color=fff;" />
 </div>
 
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=48e&height=120&section=footer"/>   
+<p align="center">
+  <strong>Formulario interactivo con validaciones dinámicas y barra de progreso visual.</strong><br/>
+  <em>Desarrollado en JavaScript y CSS puro, ofreciendo una experiencia fluida y sin errores.</em>
+</p>
+
+---
+
+## ▫️Objetivos
+
+El objetivo de **Form Design** fue desarrollar un formulario de registro que guiara al usuario paso a paso, con validaciones en tiempo real y una interfaz visualmente clara.  
+
+Se buscó:
+- **Mejorar la experiencia de usuario** en procesos de registro.
+- Dominar la **manipulación del DOM** con JavaScript puro.
+- Implementar **validaciones personalizadas** sin usar frameworks.
+
+---
+
+## ▫️Proceso de desarrollo
+
+- **Tecnologías principales:**
+  - **HTML5** para la estructura del formulario.
+  - **CSS3** para la barra de progreso y estilos dinámicos.
+  - **JavaScript puro (Vanilla JS)** para validaciones y navegación.
+
+- **Funcionalidades clave:**
+  - Validaciones en tiempo real para campos como correo, teléfono y contraseña.
+  - Barra de progreso visual que muestra el avance del usuario.
+  - Botones para avanzar y retroceder entre pasos sin recargar la página.
+  - Función para mostrar/ocultar contraseñas.
+  - Estructura reutilizable adaptable a distintos formularios.
+
+---
+
+## ▫️Conclusión
+
+**Form Design** me permitió reforzar mis conocimientos en:
+- **Validaciones personalizadas** y en tiempo real.
+- Creación de interfaces dinámicas sin librerías externas.
+- Gestión del flujo de navegación en formularios multi-paso.
+- Uso de **JavaScript modular** para mantener un código limpio y escalable.
+
+---
+
+## ▫️Tools
+
+<img src="https://skillicons.dev/icons?i=html,css,javascript" />
+
+---
+
+## ▫️Enlaces
+
+<div align="center"> 
+  <a href="https://form-register-coral.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Website-1a73e8?style=for-the-badge&logo=google-chrome&logoColor=white" />
+  </a>
+  <a href="https://discord.gg/RMrVdprfJe" target="_blank">
+    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/stivcode21/" target="_blank" >
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://www.stivcode.com/" target="_blank">
+     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white" />
+  </a>
+</div>
